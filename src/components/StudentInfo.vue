@@ -3,6 +3,7 @@
     <p>{{ student.name }}</p>
     <p>{{ student.group }}</p>
     <img src="https://robohash.org/1 2 3" alt="" />
+    <p>Всего студентов: {{ studentsCount }}</p>
   </div>
 </template>
 
@@ -29,6 +30,11 @@ export default {
       .then((response) => {
         this.student = response.data;
       });
+  },
+  computed: {
+    studentsCount: function () {
+      return this.$store.getters.getCount;
+    },
   },
 };
 </script>
