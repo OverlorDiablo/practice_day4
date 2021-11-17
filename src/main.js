@@ -6,11 +6,11 @@ import VueAxios from 'vue-axios'
 import VueRouter from 'vue-router'
 import Students from './components/Students.vue'
 import StudentInfo from './components/StudentInfo.vue'
-import store from './store'
+import store from './store.js'
 
 const routes = [
-    { path: '/', component: Students},
-    { path: '/student-info/:id', component: StudentInfo, props: true},
+    {path: '/', component: Students},
+    {path: '/student-info/:id', component: StudentInfo, props: true},
 ]
 
 const router = new VueRouter({
